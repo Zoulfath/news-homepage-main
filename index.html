@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 50px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    ul{ 
+      list-style-type: none;
+      display: flex;
+      justify-content: end;
+     }
+
+     li a:link{
+      text-decoration: none;
+     }
+
+    li a
+    {
+      padding: 15px;
+      color:  hsl(236, 13%, 42%);
+      background-color: hsl(36, 100%, 99%);
+      font-weight: 400;
+    }
+    
+    li a:hover{
+      color: hsl(5, 85%, 63%);
+
+    }
+
+    .w
+    {
+      float: left;
+      font-size: xx-large; 
+      color: black; 
+      font-weight: bold;
+    }
+    
+    body{
+      margin-top: 50px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-bottom: 50px;
+      font-family: inter;
+    }
+
+    button{
+      font-family: inter;
+      background-color: hsl(5, 85%, 63%);
+      color: white;
+      padding: 8px 30px;
+      font-size: 12px;
+      cursor: pointer;
+      /* font-weight: 700; */
+      letter-spacing: 1.7px;
+      border: none;
+      box-shadow: none;
+    }
+
+    button:hover{
+      background-color: black;
+    }
+
+    .new a:hover{
+      color: hsl(35, 77%, 62%);
+    }
+
+    .new a{
+      color: hsl(36, 100%, 99%);
+      list-style-type: none; 
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+   .new p{
+       color: hsl(236, 13%, 42%);
+       font-size: 14px;
+    }
+    /* .new{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    } */
+
+    .nav{
+      background-color: hsl(240, 100%, 5%);
+      padding: 0px 20px;
+    }
+
+    .first_section{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .main{
+      margin-top: 30px;
+      display: flex;
+      margin-top: 50px;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    .section1{
+      width: 70%;
+      margin-right: 30px;
+      height: 500px;
+    }
+
+    .text-first{
+      font-size: 50px;
+      font-weight: 800;
+      width: 45%;
+    }
+
+    .text-2-first{
+      color:hsl(236, 13%, 42%);
+      font-weight: 400;
+      font-size: 14px;
+      width: 45%;
+      line-height: 1.9;
+    }
+
+    h1{
+      font-size: x-large;
+      font-weight: 700;
+    }
+
+
+    .last{
+      display: flex;
+      flex-direction: row;
+      margin-top: 100px;
+      justify-content: space-between;
+    }
+
+    .last_1{
+      display: flex;
+      flex-direction: row;
+     }
+
+    .last_2{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .last_last{
+      display: flex;
+    }
+
+   .last p{
+    color: hsl(240, 100%, 5%);
+    font-weight: 700;
+    font-size: 15px;
+   }
+
+   
+   .last p:hover{
+    cursor: pointer;
+    color: hsl(5, 85%, 63%);  
+   }
+
+   .last h1{
+    color: rgb(201, 199, 209);
+   }
+
+   .nav-sec{
+    margin: 25px 0;
+   }
+   .nav-sec p{
+    font-size: 12px;
+    color: rgb(185, 182, 186);
+    font-weight: 400;
+   }
+
+   .last_last_0{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+   }
+
+   .last_1_0{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .last_2_0{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .traits{
+    display: none;
+  }
+
+  .backdrop{
+    display: none;
+  }
+
+
+  @media only screen and (max-width: 768px) 
+  {
+    main{
+      display: block!important;
+      width: 100%;
+    }
+
+    body{
+      margin: 10px;
+    }
+
+    .nav{
+      width: 100%!important;
+      padding: 00px;
+      margin-top: 80px;
+    }
+
+    .nav h1{
+      padding: 10px;
+      padding-bottom: 0px;
+    }
+    .new{
+      padding: 10px;
+    }
+
+    .section1{
+      width: 100%;
+      height: auto;
+    }
+
+    .text{
+      display: block!important;
+    }
+    .text-first{
+      width: 80%;
+      font-size: 45px;
+    }
+
+    .text-2-first{
+      width: 100%;
+    }
+
+    .last{
+      display: block;
+    }
+
+    .last_1, .last_2, .last_last{
+      margin-top: 20px;
+    }
+
+    .backdrop{
+      display: none;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .menu-mobile{
+      background-color: white;
+      width: 80%;
+    }
+
+    .close{
+      font-size: 70px;
+      text-align: right;
+      margin-right: 40px;
+      color: black;
+      font-weight: 100;
+      cursor: pointer;
+    }
+
+    .menu-mobile-ul{
+      display: block;
+      margin-top: 100px;
+    }
+
+    .menu-mobile-ul li{
+      font-weight: 400;
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+
+    .ul-1{
+      display: none;
+    }
+
+    .traits{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 15px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+
+
+
+
+  }
+  </style>
+</head>
+
+
+
+
+
+<body>
+  <header class="header">
+    <img src="./assets/images/logo.svg" alt="">
+    <ul class="ul-1">
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="trending.html">Trending</a></li>
+      <li><a href="popular.html">Popular</a></li>
+      <li><a href="new.html">New</a></li>
+      <li><a href="home.html">Home</a></li>
+    </ul>
+    <div class="traits">
+      <div id="clickable">
+        <img src="./assets/images/icon-menu.svg" alt="">
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+      <section class="section1" >
+        <img src="/assets/images/image-web-3-desktop.jpg" alt="image-principale" style="width: 100%;">
+        <div class="text" style="width: 100%; display: flex; flex-direction: row; margin-top: 25px; justify-content: space-between;">
+          <div class="text-first">
+            The Bright Future of Web 3.0?
+          </div>
+          <div class="text-2-first">
+            <div style="margin-bottom: 40px;">We dive into the next evolution of the web that 
+              claims to put the power of the platforms back into the hands of the people. 
+              But is it really fulfilling its promise?
+            </div>
+            <button type="button">READ MORE</button>
+          </div>
+        </div>
+        
+      </section>
+      
+      <section class="nav"  style="width: 22%">
+              <h1 style="color: hsl(35, 77%, 62%); font-size: 40px;">New</h1>
+        <div class="new">
+          <div class="nav-sec">
+            <a href="Hydrogen VS ElectricCars.html">Hydrogen VS Electric Cars</a> 
+            <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr>
+          <div class="nav-sec">
+            <a href=" The Downsides of AI Artistry.html"> The Downsides of AI Artistry</a>
+            <p> What are the possible adverse effects of on-demand AI image generation?</p>
+          </div>
+          <hr>
+          <div class="nav-sec">
+            <a href="Is VC Funding Drying Up?.html">Is VC Funding Drying Up?</a>
+            <p> Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </div>
+        </div>
+          
+        
+      </section>
+  </main>
+
+  <div class="last">
+    <div class="last_1">
+       <img src="/assets/images/image-retro-pcs.jpg" alt="imprimante" style="margin-right: 20px; width: 100px; height:100%;">
+       <div class="last_1_0">
+            <h1 style="margin-top: 0px;">01</h1>
+            <div>
+              <p>Reviving Retro PCs</p>
+              <div style="color: hsl(236, 13%, 42%); font-size: 14px; font-weight: 400;">What happens when old PCs are given modern upgrades?</div>
+            </div>
+       </div>
+    </div>
+
+    <div class="last_2">
+       <img src="/assets/images/image-top-laptops.jpg" alt="clavier" style="margin-right: 20px; width: 100px; height: 100%;">
+       <div class="last_2_0">
+             <h1 style="margin-top: 0px;">02</h1>
+             <div>
+              <p>Top 10 Laptops of 2022</p>
+            <div style="color: hsl(236, 13%, 42%); font-size: 14px; font-weight: 400;" > Our best picks for various needs and budgets.</div>
+             </div>
+      </div>
+    </div>
+
+    <div class="last_last">
+      <img src="/assets/images/image-gaming-growth.jpg" alt="gaming" style="margin-right: 20px; width: 100px; height: 100%;">
+      <div class="last_last_0">
+        <h1 style="margin-top: 0px"> 03</h1>
+        <div>
+          <p>The Growth of Gaming</p>
+          <div style="color:hsl(236, 13%, 42%); font-size: 14px; font-weight: 400;">How the pandemic has sparked fresh opportunities.</div>
+  
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+
+  <div class="backdrop" id="backdrop">
+    <div class="menu-mobile">
+      <div id="close" class="close">
+        <img src="./assets/images/icon-menu-close.svg" alt="">
+      </div>
+      <div>
+        <ul class="menu-mobile-ul">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script>
+    document.getElementById("clickable").addEventListener('click', function (e) {
+        document.getElementById('backdrop').style.display = "flex"
+      }
+    )
+    document.getElementById("close").addEventListener('click', function (e) {
+        document.getElementById('backdrop').style.display = "none"
+      }
+    )
+  </script>
+</body>
+</html>
